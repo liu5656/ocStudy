@@ -45,7 +45,7 @@ static const int bufferByteSize = 1600;
 }
 
 // 回调函数
-static int leftTimes = 0;
+//static int leftTimes = 0;
 void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef inBuffer, const AudioTimeStamp *inStartTime,
                         UInt32 inNumPackets, const AudioStreamPacketDescription *inPacketDesc)
 {
@@ -63,16 +63,7 @@ void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRe
         if (!recorder.isRecording) {
             [RecorderClient sharedInstance].operation.setToStopped = YES;
         }
-        
-//        if (!recorder.isRecording) {
-//            leftTimes++;
-//            NSLog(@"此时lefttime:%d",leftTimes);
-//        }
-//        
-//        if (3 == leftTimes) {
-//            [RecorderClient sharedInstance].operation.setToStopped = YES;
-//            leftTimes = 0;
-//        }
+
     }
 }
 
@@ -93,7 +84,7 @@ void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRe
     if (_isRecording) {
         self.isRecording = NO;
         AudioQueueStop(audioQueue, true);
-        NSLog(@"audioqueue已经暂停");
+        
 //        AudioQueueDispose(audioQueue, true);
         
     }
