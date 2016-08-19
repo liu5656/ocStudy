@@ -60,9 +60,9 @@ void inputBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRe
         
         AudioQueueEnqueueBuffer(inAQ, inBuffer, 0, NULL);
 
-        if (!recorder.isRecording) {
-            [RecorderClient sharedInstance].operation.setToStopped = YES;
-        }
+//        if (!recorder.isRecording) {
+//            [RecorderClient sharedInstance].operation.setToStopped = YES;
+//        }
 
     }
 }

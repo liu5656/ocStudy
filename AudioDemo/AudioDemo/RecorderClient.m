@@ -43,7 +43,7 @@
 - (void)stopRecording
 {
     [self.recorder stopRecording];
-//    self.operation.setToStopped = YES;
+    self.operation.setToStopped = YES;
 }
 
 
