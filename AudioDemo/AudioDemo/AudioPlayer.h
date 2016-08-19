@@ -9,7 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface AudioPlayer : NSObject
-
 - (void)play;
-
 @end

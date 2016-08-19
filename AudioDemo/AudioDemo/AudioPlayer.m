@@ -21,28 +21,34 @@
 - (instancetype)init
 {
     if (self = [super init]) {
+        AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+        NSError *err = nil;
+        [audioSession setCategory :AVAudioSessionCategoryPlayback error:&err];
         
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *filePath = [path stringByAppendingPathComponent:@"recording.mp3"];
         
+//        filePath = [[NSBundle mainBundle] pathForResource:@"android" ofType:@"mp3"];
+        
+        NSURL *url = [NSURL fileURLWithPath:filePath];
+        NSError *error = nil;
+        AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+        self.player = player;
+        player.delegate = self;
+        player.volume = 1;
+        player.numberOfLoops = 0;
+        [player prepareToPlay];
     }
     return self;
 }
 
+
 - (void)play
 {
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *filePath = [path stringByAppendingPathComponent:@"recording.mp3"];
-    
-//    filePath = [[NSBundle mainBundle] pathForResource:@"Nickelback - If Everyone Cared" ofType:@"mp3"];
-    
-    NSURL *url = [NSURL fileURLWithPath:filePath];
-    NSError *error = nil;
-    AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
-    self.player = player;
-    player.delegate = self;
-    player.volume = 1;
-    player.numberOfLoops = 4;
-    [player prepareToPlay];
-    [player play];
+    if (self.player.isPlaying) {
+        [self.player stop];
+    }
+    [self.player play];
 }
 
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error

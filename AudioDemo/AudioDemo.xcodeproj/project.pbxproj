@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		2A34F4E41D640B94009CE8B1 /* Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A34F4E31D640B94009CE8B1 /* Recorder.m */; };
 		2A34F4E71D6416C5009CE8B1 /* Mp3EncodeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A34F4E61D6416C5009CE8B1 /* Mp3EncodeOperation.m */; };
-		2A34F4EA1D643A2C009CE8B1 /* Mp3EncodeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A34F4E91D643A2C009CE8B1 /* Mp3EncodeClient.m */; };
+		2A34F4EA1D643A2C009CE8B1 /* RecorderClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A34F4E91D643A2C009CE8B1 /* RecorderClient.m */; };
 		2A34F4ED1D6441BC009CE8B1 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A34F4EC1D6441BC009CE8B1 /* AudioPlayer.m */; };
 		2A34F4EF1D644748009CE8B1 /* Nickelback - If Everyone Cared.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A34F4EE1D644748009CE8B1 /* Nickelback - If Everyone Cared.mp3 */; };
+		2A34F4F41D64555A009CE8B1 /* AudioPlayerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A34F4F31D64555A009CE8B1 /* AudioPlayerClient.m */; };
+		2A34F5021D6458B6009CE8B1 /* android.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A34F5011D6458B6009CE8B1 /* android.mp3 */; };
 		2A43C6D61D54548E0045B270 /* EncodeMp3ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A43C6D51D54548E0045B270 /* EncodeMp3ViewController.m */; };
 		2A43C6D81D5454A80045B270 /* lame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A43C6D71D5454A80045B270 /* lame.framework */; };
 		2A6FFF191D2F30E6008B6F26 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6FFF181D2F30E6008B6F26 /* main.m */; };
@@ -30,11 +32,14 @@
 		2A34F4E31D640B94009CE8B1 /* Recorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recorder.m; sourceTree = "<group>"; };
 		2A34F4E51D6416C5009CE8B1 /* Mp3EncodeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3EncodeOperation.h; sourceTree = "<group>"; };
 		2A34F4E61D6416C5009CE8B1 /* Mp3EncodeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3EncodeOperation.m; sourceTree = "<group>"; };
-		2A34F4E81D643A2C009CE8B1 /* Mp3EncodeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3EncodeClient.h; sourceTree = "<group>"; };
-		2A34F4E91D643A2C009CE8B1 /* Mp3EncodeClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3EncodeClient.m; sourceTree = "<group>"; };
+		2A34F4E81D643A2C009CE8B1 /* RecorderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecorderClient.h; sourceTree = "<group>"; };
+		2A34F4E91D643A2C009CE8B1 /* RecorderClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecorderClient.m; sourceTree = "<group>"; };
 		2A34F4EB1D6441BC009CE8B1 /* AudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayer.h; sourceTree = "<group>"; };
 		2A34F4EC1D6441BC009CE8B1 /* AudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayer.m; sourceTree = "<group>"; };
 		2A34F4EE1D644748009CE8B1 /* Nickelback - If Everyone Cared.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Nickelback - If Everyone Cared.mp3"; sourceTree = "<group>"; };
+		2A34F4F21D64555A009CE8B1 /* AudioPlayerClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioPlayerClient.h; sourceTree = "<group>"; };
+		2A34F4F31D64555A009CE8B1 /* AudioPlayerClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioPlayerClient.m; sourceTree = "<group>"; };
+		2A34F5011D6458B6009CE8B1 /* android.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = android.mp3; sourceTree = "<group>"; };
 		2A43C6D41D54548E0045B270 /* EncodeMp3ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodeMp3ViewController.h; sourceTree = "<group>"; };
 		2A43C6D51D54548E0045B270 /* EncodeMp3ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodeMp3ViewController.m; sourceTree = "<group>"; };
 		2A43C6D71D5454A80045B270 /* lame.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = lame.framework; sourceTree = "<group>"; };
@@ -76,11 +81,14 @@
 				2A34F4E31D640B94009CE8B1 /* Recorder.m */,
 				2A34F4E51D6416C5009CE8B1 /* Mp3EncodeOperation.h */,
 				2A34F4E61D6416C5009CE8B1 /* Mp3EncodeOperation.m */,
-				2A34F4E81D643A2C009CE8B1 /* Mp3EncodeClient.h */,
-				2A34F4E91D643A2C009CE8B1 /* Mp3EncodeClient.m */,
+				2A34F4E81D643A2C009CE8B1 /* RecorderClient.h */,
+				2A34F4E91D643A2C009CE8B1 /* RecorderClient.m */,
+				2A34F4F21D64555A009CE8B1 /* AudioPlayerClient.h */,
+				2A34F4F31D64555A009CE8B1 /* AudioPlayerClient.m */,
 				2A34F4EB1D6441BC009CE8B1 /* AudioPlayer.h */,
 				2A34F4EC1D6441BC009CE8B1 /* AudioPlayer.m */,
 				2A34F4EE1D644748009CE8B1 /* Nickelback - If Everyone Cared.mp3 */,
+				2A34F5011D6458B6009CE8B1 /* android.mp3 */,
 			);
 			name = pcmtomp3;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A34F5021D6458B6009CE8B1 /* android.mp3 in Resources */,
 				2A6FFF331D2F338D008B6F26 /* videoRing.caf in Resources */,
 				2A6FFF271D2F30E6008B6F26 /* LaunchScreen.storyboard in Resources */,
 				2A6FFF241D2F30E6008B6F26 /* Assets.xcassets in Resources */,
@@ -214,10 +223,11 @@
 			files = (
 				2A6FFF1F1D2F30E6008B6F26 /* ViewController.m in Sources */,
 				2A6FFF1C1D2F30E6008B6F26 /* AppDelegate.m in Sources */,
-				2A34F4EA1D643A2C009CE8B1 /* Mp3EncodeClient.m in Sources */,
+				2A34F4EA1D643A2C009CE8B1 /* RecorderClient.m in Sources */,
 				2A6FFF191D2F30E6008B6F26 /* main.m in Sources */,
 				2A43C6D61D54548E0045B270 /* EncodeMp3ViewController.m in Sources */,
 				2A6FFF301D2F3330008B6F26 /* SoundEffectViewController.m in Sources */,
+				2A34F4F41D64555A009CE8B1 /* AudioPlayerClient.m in Sources */,
 				2A6FFF361D2F3847008B6F26 /* AudioQueueViewController.m in Sources */,
 				2A34F4ED1D6441BC009CE8B1 /* AudioPlayer.m in Sources */,
 				2A34F4E71D6416C5009CE8B1 /* Mp3EncodeOperation.m in Sources */,

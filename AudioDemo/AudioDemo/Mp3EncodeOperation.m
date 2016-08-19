@@ -45,7 +45,7 @@ lame_t lame;
         }// end @synchronized
         
         if (audioData != nil) {
-            
+            NSLog(@"待转码的数据长度:%ld",audioData.length);
             short *recordingData = (short *)audioData.bytes;
             int pcmLen = audioData.length;
             int nsamples = pcmLen / 2;
@@ -62,8 +62,8 @@ lame_t lame;
             if (_setToStopped) {
                 //NSLog(@"break");
                 break;
-            }else{
-                [NSThread sleepForTimeInterval:0.05];
+//            }else{
+//                [NSThread sleepForTimeInterval:0.05];
                 //NSLog(@"sleep");
             }
         }

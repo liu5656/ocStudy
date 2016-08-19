@@ -11,6 +11,7 @@
 #import "Mp3EncodeOperation.h"
 #import "AudioPlayer.h"
 
+#import "RecorderClient.h"
 @interface EncodeMp3ViewController ()
 
 @property (nonatomic, strong) Recorder *recorder;
@@ -23,22 +24,26 @@
 @implementation EncodeMp3ViewController
 - (IBAction)start:(id)sender {
     
-    NSMutableArray *recordQueue = [NSMutableArray array];
-    self.operation = [[Mp3EncodeOperation alloc] init];
-    self.operation.recordQueue = recordQueue;
+//    NSMutableArray *recordQueue = [NSMutableArray array];
+//    self.operation = [[Mp3EncodeOperation alloc] init];
+//    self.operation.recordQueue = recordQueue;
+//    
+//    self.operationQueue = [[NSOperationQueue alloc] init];
+//    [self.operationQueue addOperation:self.operation];
+//    
+//    self.recorder = [[Recorder alloc] init];
+//    self.recorder.recordQueue = recordQueue;
+//    [self.recorder startRecording];
     
-    self.operationQueue = [[NSOperationQueue alloc] init];
-    [self.operationQueue addOperation:self.operation];
-    
-    self.recorder = [[Recorder alloc] init];
-    self.recorder.recordQueue = recordQueue;
-    [self.recorder startRecording];
+    [[RecorderClient sharedInstance] startRecording];
     
 }
 
 - (IBAction)stop:(id)sender {
-    self.operation.setToStopped = YES;
-    [self.recorder stopRecording];
+//    self.operation.setToStopped = YES;
+//    [self.recorder stopRecording];
+    
+    [[RecorderClient sharedInstance] stopRecording];
     
 }
 - (IBAction)play:(id)sender {
