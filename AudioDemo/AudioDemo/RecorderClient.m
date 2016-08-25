@@ -37,6 +37,8 @@
     
     [self recorder];
     [self.recorder startRecording];
+    NSLog(@"master");
+    NSLog(@"master2");
 }
 
 
