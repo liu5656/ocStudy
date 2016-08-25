@@ -37,6 +37,7 @@
     
     [self recorder];
     [self.recorder startRecording];
+    NSLog(@"branch");
 }
 
 
