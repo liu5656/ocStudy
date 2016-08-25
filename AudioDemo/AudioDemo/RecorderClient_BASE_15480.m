@@ -37,16 +37,13 @@
     
     [self recorder];
     [self.recorder startRecording];
-    NSLog(@"branch");
-    NSLog(@"master");
-    NSLog(@"master2");
 }
 
 
 - (void)stopRecording
 {
     [self.recorder stopRecording];
-    self.operation.setToStopped = YES;
+//    self.operation.setToStopped = YES;
 }
 
 
