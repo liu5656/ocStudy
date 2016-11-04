@@ -38,8 +38,6 @@
     [self recorder];
     [self.recorder startRecording];
     NSLog(@"branch");
-    NSLog(@"master");
-    NSLog(@"master2");
 }
 
 
