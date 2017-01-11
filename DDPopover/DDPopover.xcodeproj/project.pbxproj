@@ -14,6 +14,7 @@
 		2A29DE811D925D1000B87F17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A29DE801D925D1000B87F17 /* Assets.xcassets */; };
 		2A29DE841D925D1000B87F17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A29DE821D925D1000B87F17 /* LaunchScreen.storyboard */; };
 		2A29DE8D1D925D4700B87F17 /* DDPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A29DE8C1D925D4700B87F17 /* DDPopover.m */; };
+		2A3F16271DF539290055C00F /* BViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3F16261DF539290055C00F /* BViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		2A29DE851D925D1000B87F17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A29DE8B1D925D4700B87F17 /* DDPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDPopover.h; sourceTree = "<group>"; };
 		2A29DE8C1D925D4700B87F17 /* DDPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDPopover.m; sourceTree = "<group>"; };
+		2A3F16251DF539290055C00F /* BViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BViewController.h; sourceTree = "<group>"; };
+		2A3F16261DF539290055C00F /* BViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,8 @@
 				2A29DE781D925D1000B87F17 /* AppDelegate.m */,
 				2A29DE7A1D925D1000B87F17 /* ViewController.h */,
 				2A29DE7B1D925D1000B87F17 /* ViewController.m */,
+				2A3F16251DF539290055C00F /* BViewController.h */,
+				2A3F16261DF539290055C00F /* BViewController.m */,
 				2A29DE8B1D925D4700B87F17 /* DDPopover.h */,
 				2A29DE8C1D925D4700B87F17 /* DDPopover.m */,
 				2A29DE7D1D925D1000B87F17 /* Main.storyboard */,
@@ -159,6 +164,7 @@
 				2A29DE7C1D925D1000B87F17 /* ViewController.m in Sources */,
 				2A29DE8D1D925D4700B87F17 /* DDPopover.m in Sources */,
 				2A29DE791D925D1000B87F17 /* AppDelegate.m in Sources */,
+				2A3F16271DF539290055C00F /* BViewController.m in Sources */,
 				2A29DE761D925D1000B87F17 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2D58CNG8UK;
 				INFOPLIST_FILE = DDPopover/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.lj.com.DDPopover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +302,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = DDPopover/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.lj.com.DDPopover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -320,6 +328,7 @@
 				2A29DE8A1D925D1000B87F17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
