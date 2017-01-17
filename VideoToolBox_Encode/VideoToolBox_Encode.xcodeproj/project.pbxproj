@@ -110,7 +110,8 @@
 				TargetAttributes = {
 					2AE42EC91E2CC2B800923A61 = {
 						CreatedOnToolsVersion = 8.2.1;
-						ProvisioningStyle = Automatic;
+						DevelopmentTeam = 2D58CNG8UK;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -272,10 +273,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2D58CNG8UK;
 				INFOPLIST_FILE = VideoToolBox_Encode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.lj.com.VideoToolBox-Encode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a9971678-df15-4577-8145-0dd09011d1eb";
+				PROVISIONING_PROFILE_SPECIFIER = wildcard_20161119_1105;
 			};
 			name = Debug;
 		};
@@ -283,7 +288,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = VideoToolBox_Encode/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.lj.com.VideoToolBox-Encode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -309,6 +316,7 @@
 				2AE42EE31E2CC2B800923A61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
