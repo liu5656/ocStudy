@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A4107541E529B4C003699AF /* H264Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4107531E529B4C003699AF /* H264Encoder.m */; };
+		2A4107571E52A3D7003699AF /* H264Decoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4107561E52A3D7003699AF /* H264Decoder.m */; };
+		2A41075A1E52A642003699AF /* LYOpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4107591E52A642003699AF /* LYOpenGLView.m */; };
+		2A41075D1E52A708003699AF /* H264DecodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A41075C1E52A708003699AF /* H264DecodeViewController.m */; };
+		2A4107601E52ACBA003699AF /* qwe.h264 in Resources */ = {isa = PBXBuildFile; fileRef = 2A41075E1E52ACBA003699AF /* qwe.h264 */; };
+		2A4107611E52ACBA003699AF /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2A41075F1E52ACBA003699AF /* Shader.fsh */; };
+		2A4107631E52AF4C003699AF /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2A4107621E52AF4C003699AF /* Shader.vsh */; };
 		2AE42ECF1E2CC2B800923A61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE42ECE1E2CC2B800923A61 /* main.m */; };
 		2AE42ED21E2CC2B800923A61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE42ED11E2CC2B800923A61 /* AppDelegate.m */; };
 		2AE42ED51E2CC2B800923A61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE42ED41E2CC2B800923A61 /* ViewController.m */; };
@@ -16,6 +23,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A4107521E529B4C003699AF /* H264Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H264Encoder.h; sourceTree = "<group>"; };
+		2A4107531E529B4C003699AF /* H264Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = H264Encoder.m; sourceTree = "<group>"; };
+		2A4107551E52A3D7003699AF /* H264Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H264Decoder.h; sourceTree = "<group>"; };
+		2A4107561E52A3D7003699AF /* H264Decoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = H264Decoder.m; sourceTree = "<group>"; };
+		2A4107581E52A642003699AF /* LYOpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYOpenGLView.h; sourceTree = "<group>"; };
+		2A4107591E52A642003699AF /* LYOpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYOpenGLView.m; sourceTree = "<group>"; };
+		2A41075B1E52A708003699AF /* H264DecodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = H264DecodeViewController.h; sourceTree = "<group>"; };
+		2A41075C1E52A708003699AF /* H264DecodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = H264DecodeViewController.m; sourceTree = "<group>"; };
+		2A41075E1E52ACBA003699AF /* qwe.h264 */ = {isa = PBXFileReference; lastKnownFileType = file; path = qwe.h264; sourceTree = "<group>"; };
+		2A41075F1E52ACBA003699AF /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		2A4107621E52AF4C003699AF /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
 		2AE42ECA1E2CC2B800923A61 /* VideoToolBox_Encode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoToolBox_Encode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AE42ECE1E2CC2B800923A61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2AE42ED01E2CC2B800923A61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,11 +80,22 @@
 				2AE42ED11E2CC2B800923A61 /* AppDelegate.m */,
 				2AE42ED31E2CC2B800923A61 /* ViewController.h */,
 				2AE42ED41E2CC2B800923A61 /* ViewController.m */,
+				2A41075B1E52A708003699AF /* H264DecodeViewController.h */,
+				2A41075C1E52A708003699AF /* H264DecodeViewController.m */,
 				2AE42ED61E2CC2B800923A61 /* Main.storyboard */,
 				2AE42ED91E2CC2B800923A61 /* Assets.xcassets */,
 				2AE42EDB1E2CC2B800923A61 /* LaunchScreen.storyboard */,
 				2AE42EDE1E2CC2B800923A61 /* Info.plist */,
 				2AE42ECD1E2CC2B800923A61 /* Supporting Files */,
+				2A4107521E529B4C003699AF /* H264Encoder.h */,
+				2A4107531E529B4C003699AF /* H264Encoder.m */,
+				2A4107551E52A3D7003699AF /* H264Decoder.h */,
+				2A4107561E52A3D7003699AF /* H264Decoder.m */,
+				2A4107581E52A642003699AF /* LYOpenGLView.h */,
+				2A4107591E52A642003699AF /* LYOpenGLView.m */,
+				2A41075E1E52ACBA003699AF /* qwe.h264 */,
+				2A41075F1E52ACBA003699AF /* Shader.fsh */,
+				2A4107621E52AF4C003699AF /* Shader.vsh */,
 			);
 			path = VideoToolBox_Encode;
 			sourceTree = "<group>";
@@ -140,7 +169,10 @@
 			files = (
 				2AE42EDD1E2CC2B800923A61 /* LaunchScreen.storyboard in Resources */,
 				2AE42EDA1E2CC2B800923A61 /* Assets.xcassets in Resources */,
+				2A4107631E52AF4C003699AF /* Shader.vsh in Resources */,
 				2AE42ED81E2CC2B800923A61 /* Main.storyboard in Resources */,
+				2A4107601E52ACBA003699AF /* qwe.h264 in Resources */,
+				2A4107611E52ACBA003699AF /* Shader.fsh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,9 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A4107541E529B4C003699AF /* H264Encoder.m in Sources */,
 				2AE42ED51E2CC2B800923A61 /* ViewController.m in Sources */,
+				2A41075A1E52A642003699AF /* LYOpenGLView.m in Sources */,
 				2AE42ED21E2CC2B800923A61 /* AppDelegate.m in Sources */,
 				2AE42ECF1E2CC2B800923A61 /* main.m in Sources */,
+				2A41075D1E52A708003699AF /* H264DecodeViewController.m in Sources */,
+				2A4107571E52A3D7003699AF /* H264Decoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +315,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.lj.com.VideoToolBox-Encode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a9971678-df15-4577-8145-0dd09011d1eb";
-				PROVISIONING_PROFILE_SPECIFIER = wildcard_20161119_1105;
+				PROVISIONING_PROFILE = "23bd8eb0-a6d1-4fb6-b24c-c1da51d1ca1d";
+				PROVISIONING_PROFILE_SPECIFIER = wildcard_20150426_1049;
 			};
 			name = Debug;
 		};
