@@ -1,0 +1,7 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform:ios,'8.0'
+target 'UploadDownloadTools' do
+pod 'AFNetworking', '~> 3.0.0'
+pod 'JSONModel', '~> 1.2.0'
+pod 'FMDB', '~> 2.6.2'
+end

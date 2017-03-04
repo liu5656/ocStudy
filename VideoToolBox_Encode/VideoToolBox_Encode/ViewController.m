@@ -11,8 +11,9 @@
 #import <AVFoundation/AVFoundation.h>
 
 #import "H264Encoder.h"
+#import "AACEncoder.h"
 
-@interface ViewController ()<AVCaptureVideoDataOutputSampleBufferDelegate>
+@interface ViewController ()<AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
 
 @property (nonatomic, strong) UILabel *mLabel;
 @property (nonatomic, strong) AVCaptureSession *mCaptureSession;
@@ -20,12 +21,18 @@
 @property (nonatomic, strong) AVCaptureVideoDataOutput *mCaptureDeviceOutput;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *mPreviewLayer;
 
+@property (nonatomic, strong) AACEncoder *mAudioEncoder;
+@property (nonatomic, strong) AVCaptureAudioDataOutput *mCaptureAudioOutput;
+
 
 @end
 
 @implementation ViewController
 {
     dispatch_queue_t mCaptureQueue;
+    dispatch_queue_t mAudioEncodeQueue;
+    
+    NSFileHandle *audioFileHandle;
 }
 
 - (void)viewDidLoad {
@@ -45,6 +52,8 @@
     [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [self.view addSubview:button];
     [button addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.mAudioEncoder = [[AACEncoder alloc] init];
 }
 
 - (void)onClick:(UIButton *)sender {
@@ -62,6 +71,7 @@
     self.mCaptureSession.sessionPreset = AVCaptureSessionPreset1280x720;
     
     mCaptureQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    mAudioEncodeQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 
     AVCaptureDevice *inputCamera = nil;
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
@@ -97,6 +107,24 @@
     [self.mPreviewLayer setFrame:self.view.bounds];
     [self.view.layer addSublayer:self.mPreviewLayer];
     
+    
+    AVCaptureDevice *audio = [[AVCaptureDevice devicesWithMediaType:AVMediaTypeAudio] lastObject];
+    AVCaptureDeviceInput *mCaptureAudioDeviceInput = [[AVCaptureDeviceInput alloc] initWithDevice:audio error:nil];
+    if ([self.mCaptureSession canAddInput:mCaptureAudioDeviceInput]) {
+        [self.mCaptureSession addInput:mCaptureAudioDeviceInput];
+    }
+    AVCaptureAudioDataOutput *mCaptureAudioOutput = [[AVCaptureAudioDataOutput alloc] init];
+    self.mCaptureAudioOutput = mCaptureAudioOutput;
+    if ([self.mCaptureSession canAddOutput:mCaptureAudioOutput]) {
+        [self.mCaptureSession addOutput:mCaptureAudioOutput];
+    }
+    [mCaptureAudioOutput setSampleBufferDelegate:self queue:mCaptureQueue];
+    
+    NSString *audioFile = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"abc.aac"];
+    [[NSFileManager defaultManager] removeItemAtPath:audioFile error:nil];
+    [[NSFileManager defaultManager] createFileAtPath:audioFile contents:nil attributes:nil];
+    audioFileHandle = [NSFileHandle fileHandleForWritingAtPath:audioFile];
+    
     [self.mCaptureSession startRunning];
     
 }
@@ -112,7 +140,15 @@
 
 #pragma mark AVCaptureVideoDataOutputSampleBufferDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-        [[H264Encoder sharedInstance] encode:sampleBuffer];
+    if (self.mCaptureAudioOutput == captureOutput) {
+        dispatch_sync(mAudioEncodeQueue, ^{
+            [self.mAudioEncoder encodeSampleBuffer:sampleBuffer completionBlock:^(NSData *encodedData, NSError *error) {
+                [audioFileHandle writeData:encodedData];
+            }];
+        });
+    }else{
+//        [[H264Encoder sharedInstance] encode:sampleBuffer];
+    }
 
 }
 

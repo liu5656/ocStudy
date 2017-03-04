@@ -55,7 +55,7 @@
 - (void)initVideoToolBox {
     dispatch_sync(mEncodeQueue, ^{
         frameID = 0;
-        int width = 480, height = 640;
+        int width = 1280, height = 720;
         OSStatus status = VTCompressionSessionCreate(NULL,width,height,kCMVideoCodecType_H264,NULL,NULL,NULL,didCompressH264,(__bridge void *)(self),&EncodingSession);
         if (status !=0) {
             NSLog(@"h264: unable to create a h264 session");
@@ -77,7 +77,7 @@
         VTSessionSetProperty(EncodingSession, kVTCompressionPropertyKey_ExpectedFrameRate, fpsRef);
         
         // 设置码率上限bps
-        int bitRate = width * height * 3 * 4 * 8;
+        int bitRate = width * height * 3 * 4 * 4;
         CFNumberRef bitRateRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberSInt32Type, &bitRate);
         VTSessionSetProperty(EncodingSession, kVTCompressionPropertyKey_AverageBitRate, bitRateRef);
         
