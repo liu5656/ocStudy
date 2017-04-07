@@ -30,6 +30,10 @@
 		2A2286EA1E83C46F00338D54 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2286E91E83C46F00338D54 /* libz.tbd */; };
 		2A2286EC1E83C47800338D54 /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2286EB1E83C47800338D54 /* libbz2.tbd */; };
 		2A2286EE1E83C48900338D54 /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2286ED1E83C48900338D54 /* libiconv.tbd */; };
+		2A344A121E84F43F0054863F /* EncodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A344A101E84F43F0054863F /* EncodeViewController.m */; };
+		2A344A171E84F44F0054863F /* DecodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A344A151E84F44F0054863F /* DecodeViewController.m */; };
+		2A344A1A1E84F4610054863F /* FFmpegTest.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 2A344A191E84F4610054863F /* FFmpegTest.yuv */; };
+		2A7BAD901E976FC0005BB454 /* HWH264Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BAD8F1E976FC0005BB454 /* HWH264Encoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +159,13 @@
 		2A2286E91E83C46F00338D54 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		2A2286EB1E83C47800338D54 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
 		2A2286ED1E83C48900338D54 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		2A344A0F1E84F43F0054863F /* EncodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncodeViewController.h; sourceTree = "<group>"; };
+		2A344A101E84F43F0054863F /* EncodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncodeViewController.m; sourceTree = "<group>"; };
+		2A344A141E84F44F0054863F /* DecodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DecodeViewController.h; sourceTree = "<group>"; };
+		2A344A151E84F44F0054863F /* DecodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DecodeViewController.m; sourceTree = "<group>"; };
+		2A344A191E84F4610054863F /* FFmpegTest.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FFmpegTest.yuv; sourceTree = "<group>"; };
+		2A7BAD8E1E976FC0005BB454 /* HWH264Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWH264Encoder.h; sourceTree = "<group>"; };
+		2A7BAD8F1E976FC0005BB454 /* HWH264Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWH264Encoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +213,14 @@
 				2A22864F1E83C42900338D54 /* AppDelegate.m */,
 				2A2286511E83C42900338D54 /* ViewController.h */,
 				2A2286521E83C42900338D54 /* ViewController.m */,
+				2A344A141E84F44F0054863F /* DecodeViewController.h */,
+				2A344A151E84F44F0054863F /* DecodeViewController.m */,
+				2A344A0F1E84F43F0054863F /* EncodeViewController.h */,
+				2A344A101E84F43F0054863F /* EncodeViewController.m */,
+				2A7BAD8E1E976FC0005BB454 /* HWH264Encoder.h */,
+				2A7BAD8F1E976FC0005BB454 /* HWH264Encoder.m */,
 				2A2286541E83C42900338D54 /* Main.storyboard */,
+				2A344A191E84F4610054863F /* FFmpegTest.yuv */,
 				2A2286571E83C42900338D54 /* Assets.xcassets */,
 				2A2286591E83C42900338D54 /* LaunchScreen.storyboard */,
 				2A22865C1E83C42900338D54 /* Info.plist */,
@@ -485,6 +503,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A344A1A1E84F4610054863F /* FFmpegTest.yuv in Resources */,
 				2A22865B1E83C42900338D54 /* LaunchScreen.storyboard in Resources */,
 				2A2286E61E83C45B00338D54 /* libswresample.pc in Resources */,
 				2A2286E51E83C45B00338D54 /* libavutil.pc in Resources */,
@@ -505,9 +524,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A344A171E84F44F0054863F /* DecodeViewController.m in Sources */,
 				2A2286531E83C42900338D54 /* ViewController.m in Sources */,
 				2A2286501E83C42900338D54 /* AppDelegate.m in Sources */,
+				2A344A121E84F43F0054863F /* EncodeViewController.m in Sources */,
 				2A22864D1E83C42900338D54 /* main.m in Sources */,
+				2A7BAD901E976FC0005BB454 /* HWH264Encoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +702,7 @@
 				2A2286611E83C42900338D54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

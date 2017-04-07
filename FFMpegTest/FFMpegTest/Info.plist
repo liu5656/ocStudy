@@ -41,5 +41,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>老子要抢你的手机,让不让???????</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>老子要用你的麦克风,干不干??????</string>
 </dict>
 </plist>

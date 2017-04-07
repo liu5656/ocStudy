@@ -68,7 +68,7 @@
 
 - (void)startCapture {
     self.mCaptureSession = [[AVCaptureSession alloc] init];
-    self.mCaptureSession.sessionPreset = AVCaptureSessionPreset1280x720;
+    self.mCaptureSession.sessionPreset = AVCaptureSessionPreset1920x1080;
     
     mCaptureQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     mAudioEncodeQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -147,7 +147,7 @@
             }];
         });
     }else{
-//        [[H264Encoder sharedInstance] encode:sampleBuffer];
+        [[H264Encoder sharedInstance] encode:sampleBuffer];
     }
 
 }
