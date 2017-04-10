@@ -10,6 +10,7 @@
 
 #import <AVFoundation/AVFoundation.h>
 
+#import "HWH264Encoder.h"
 
 @interface EncodeViewController ()<AVCaptureAudioDataOutputSampleBufferDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 
@@ -68,12 +69,10 @@
 #pragma mark AVCaptureVideoDataOutputSampleBufferDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
     if (connection == _videoConnection) {
-        NSLog(@"video data: %@", sampleBuffer);
         
-        
-        
+        [[HWH264Encoder sharedInstance] convertSampleBufferToH264:sampleBuffer];
     }else{
-        NSLog(@"audio data: %@", sampleBuffer);
+        
     }
 }
 

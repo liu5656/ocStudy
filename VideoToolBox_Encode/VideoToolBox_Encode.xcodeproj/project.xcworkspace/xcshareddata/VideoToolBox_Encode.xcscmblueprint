@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FBE22825812F8C815CAE0AF715244BC86CF6C3DD",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FBE22825812F8C815CAE0AF715244BC86CF6C3DD" : 9223372036854775807,
+    "AC7688CD4F7F8747D881040008CEE22A7D0414F0" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "21A0BC83-3EBA-450E-8EE8-36F76C1CD836",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FBE22825812F8C815CAE0AF715244BC86CF6C3DD" : "ocStudy\/",
+    "AC7688CD4F7F8747D881040008CEE22A7D0414F0" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "VideoToolBox_Encode",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "VideoToolBox_Encode\/VideoToolBox_Encode.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/dadache\/repository.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AC7688CD4F7F8747D881040008CEE22A7D0414F0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/liu5656\/ocStudy.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FBE22825812F8C815CAE0AF715244BC86CF6C3DD"
+    }
+  ]
+}

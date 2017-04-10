@@ -15,6 +15,6 @@ typedef void (^completionBlock)(NSData *h264Data, NSError *error);
 
 + (instancetype)sharedInstance;
 
-- (void)convertSampleBufferToH264:(CMSampleBufferRef)sampleBuffer andCompletionBlock:(completionBlock)block;
+- (void)convertSampleBufferToH264:(CMSampleBufferRef)sampleBuffer;
 
 @end

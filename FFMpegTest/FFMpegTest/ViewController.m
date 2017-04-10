@@ -17,6 +17,8 @@
 #import <CoreTelephony/CoreTelephonyDefines.h>
 #import <CallKit/CallKit.h>
 
+#import "HWH264Encoder.h"
+
 
 @interface ViewController ()
 {
@@ -33,6 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [HWH264Encoder sharedInstance];
     // Do any additional setup after loading the view, typically from a nib.
     
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"nwn" ofType:@"mp4"];
