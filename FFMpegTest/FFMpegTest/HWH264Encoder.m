@@ -143,6 +143,7 @@ void didCompressH264(void * CM_NULLABLE outputCallbackRefCon, void * CM_NULLABLE
             NSLog(@"h264: unable to create a h264 session");
         }
         // 设置实时编码输出(避免延迟)
+
         VTSessionSetProperty(encodingSession, kVTCompressionPropertyKey_RealTime, kCFBooleanTrue);
         VTSessionSetProperty(encodingSession, kVTCompressionPropertyKey_ProfileLevel, kVTProfileLevel_H264_Baseline_AutoLevel);
         
