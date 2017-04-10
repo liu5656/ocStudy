@@ -50,25 +50,18 @@ void didCompressH264(void * CM_NULLABLE outputCallbackRefCon, void * CM_NULLABLE
             NSLog(@"h264: unable to create a h264 session");
         }
         
-        // 设置实时编码输出(避免延迟)
         VTSessionSetProperty(encodingSession, kVTCompressionPropertyKey_RealTime, kCFBooleanTrue);
         VTSessionSetProperty(encodingSession, kVTCompressionPropertyKey_ProfileLevel, kVTProfileLevel_H264_Baseline_AutoLevel);
         
         // 设置关键帧(GOPsize)间隔
-        int frameInterval = 10;
-        CFNumberRef fpsRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberIntType, &frameInterval);
-        VTSessionSetProperty(encodingSession, kVTCompressionPropertyKey_ExpectedFrameRate, fpsRef);
+        int frameInterval = 40;
+        CFNumberRef frameIntervalRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberIntType, &frameInterval);
+        VTSessionSetProperty(encodingSession, kVTCompressionPropertyKey_MaxKeyFrameInterval, frameIntervalRef);
         
-        // 设置码率上线bps
+        // 设置码率上限bps
         int bitRate = width * height * 3 * 4 * 4;
         CFNumberRef bitRateRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberSInt32Type, &bitRate);
         VTSessionSetProperty(encodingSession, kVTCompressionPropertyKey_AverageBitRate, bitRateRef);
-        
-        // 设置码率均值bps
-        int bitRateLimit = width * height * 3 * 4;
-        CFNumberRef bitRateLimitRef = CFNumberCreate(kCFAllocatorDefault, kCFNumberSInt32Type, &bitRateLimit);
-        VTSessionSetProperty(encodingSession, kVTCompressionPropertyKey_DataRateLimits, bitRateLimitRef);
-        
         VTCompressionSessionPrepareToEncodeFrames(encodingSession);
         
     });
