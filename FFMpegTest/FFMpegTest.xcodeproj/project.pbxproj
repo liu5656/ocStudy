@@ -34,6 +34,10 @@
 		2A344A171E84F44F0054863F /* DecodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A344A151E84F44F0054863F /* DecodeViewController.m */; };
 		2A344A1A1E84F4610054863F /* FFmpegTest.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 2A344A191E84F4610054863F /* FFmpegTest.yuv */; };
 		2A7BAD901E976FC0005BB454 /* HWH264Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7BAD8F1E976FC0005BB454 /* HWH264Encoder.m */; };
+		2A97448F1EA84BAA000D7B46 /* ConvertToMov.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A97448E1EA84BAA000D7B46 /* ConvertToMov.m */; };
+		2A9D29E11EAD97E600423260 /* MP4Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A9D29E01EAD97E600423260 /* MP4Encoder.m */; };
+		2AE92C161EA72E38006AD436 /* libmp4v2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE92C151EA72E38006AD436 /* libmp4v2.a */; };
+		2AE92C1A1EA73978006AD436 /* SWH264Encoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE92C191EA73978006AD436 /* SWH264Encoder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +170,30 @@
 		2A344A191E84F4610054863F /* FFmpegTest.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = FFmpegTest.yuv; sourceTree = "<group>"; };
 		2A7BAD8E1E976FC0005BB454 /* HWH264Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HWH264Encoder.h; sourceTree = "<group>"; };
 		2A7BAD8F1E976FC0005BB454 /* HWH264Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HWH264Encoder.m; sourceTree = "<group>"; };
+		2A97448D1EA84BAA000D7B46 /* ConvertToMov.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConvertToMov.h; sourceTree = "<group>"; };
+		2A97448E1EA84BAA000D7B46 /* ConvertToMov.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConvertToMov.m; sourceTree = "<group>"; };
+		2A9D29D91EAD93FB00423260 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		2A9D29DB1EAD940C00423260 /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
+		2A9D29DD1EAD941B00423260 /* libc++abi.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++abi.tbd"; path = "usr/lib/libc++abi.tbd"; sourceTree = SDKROOT; };
+		2A9D29DF1EAD97E600423260 /* MP4Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MP4Encoder.h; sourceTree = "<group>"; };
+		2A9D29E01EAD97E600423260 /* MP4Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MP4Encoder.m; sourceTree = "<group>"; };
+		2AE92C061EA72E38006AD436 /* chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chapter.h; sourceTree = "<group>"; };
+		2AE92C071EA72E38006AD436 /* file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file.h; sourceTree = "<group>"; };
+		2AE92C081EA72E38006AD436 /* file_prop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = file_prop.h; sourceTree = "<group>"; };
+		2AE92C091EA72E38006AD436 /* general.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = general.h; sourceTree = "<group>"; };
+		2AE92C0A1EA72E38006AD436 /* isma.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = isma.h; sourceTree = "<group>"; };
+		2AE92C0B1EA72E38006AD436 /* itmf_generic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itmf_generic.h; sourceTree = "<group>"; };
+		2AE92C0C1EA72E38006AD436 /* itmf_tags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itmf_tags.h; sourceTree = "<group>"; };
+		2AE92C0D1EA72E38006AD436 /* mp4v2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mp4v2.h; sourceTree = "<group>"; };
+		2AE92C0E1EA72E38006AD436 /* platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = platform.h; sourceTree = "<group>"; };
+		2AE92C0F1EA72E38006AD436 /* project.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = project.h; sourceTree = "<group>"; };
+		2AE92C101EA72E38006AD436 /* sample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sample.h; sourceTree = "<group>"; };
+		2AE92C111EA72E38006AD436 /* streaming.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = streaming.h; sourceTree = "<group>"; };
+		2AE92C121EA72E38006AD436 /* track.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = track.h; sourceTree = "<group>"; };
+		2AE92C131EA72E38006AD436 /* track_prop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = track_prop.h; sourceTree = "<group>"; };
+		2AE92C151EA72E38006AD436 /* libmp4v2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp4v2.a; sourceTree = "<group>"; };
+		2AE92C181EA73978006AD436 /* SWH264Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWH264Encoder.h; sourceTree = "<group>"; };
+		2AE92C191EA73978006AD436 /* SWH264Encoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWH264Encoder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +211,7 @@
 				2A2286DA1E83C45B00338D54 /* libavcodec.a in Frameworks */,
 				2A2286DF1E83C45B00338D54 /* libswresample.a in Frameworks */,
 				2A2286DD1E83C45B00338D54 /* libavformat.a in Frameworks */,
+				2AE92C161EA72E38006AD436 /* libmp4v2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,11 +248,18 @@
 				2A344A101E84F43F0054863F /* EncodeViewController.m */,
 				2A7BAD8E1E976FC0005BB454 /* HWH264Encoder.h */,
 				2A7BAD8F1E976FC0005BB454 /* HWH264Encoder.m */,
+				2AE92C181EA73978006AD436 /* SWH264Encoder.h */,
+				2AE92C191EA73978006AD436 /* SWH264Encoder.m */,
+				2A97448D1EA84BAA000D7B46 /* ConvertToMov.h */,
+				2A97448E1EA84BAA000D7B46 /* ConvertToMov.m */,
+				2A9D29DF1EAD97E600423260 /* MP4Encoder.h */,
+				2A9D29E01EAD97E600423260 /* MP4Encoder.m */,
 				2A2286541E83C42900338D54 /* Main.storyboard */,
 				2A344A191E84F4610054863F /* FFmpegTest.yuv */,
 				2A2286571E83C42900338D54 /* Assets.xcassets */,
 				2A2286591E83C42900338D54 /* LaunchScreen.storyboard */,
 				2A22865C1E83C42900338D54 /* Info.plist */,
+				2AE92C031EA72E38006AD436 /* Mp4v2-2.0.0 */,
 				2A2286621E83C45B00338D54 /* FFMpeg-arm64 */,
 				2A22864B1E83C42900338D54 /* Supporting Files */,
 			);
@@ -437,11 +473,60 @@
 		2A2286E81E83C46F00338D54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A9D29DD1EAD941B00423260 /* libc++abi.tbd */,
+				2A9D29DB1EAD940C00423260 /* libc++.1.tbd */,
+				2A9D29D91EAD93FB00423260 /* libc++.tbd */,
 				2A2286ED1E83C48900338D54 /* libiconv.tbd */,
 				2A2286EB1E83C47800338D54 /* libbz2.tbd */,
 				2A2286E91E83C46F00338D54 /* libz.tbd */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2AE92C031EA72E38006AD436 /* Mp4v2-2.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				2AE92C041EA72E38006AD436 /* include */,
+				2AE92C141EA72E38006AD436 /* lib */,
+			);
+			path = "Mp4v2-2.0.0";
+			sourceTree = "<group>";
+		};
+		2AE92C041EA72E38006AD436 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				2AE92C051EA72E38006AD436 /* mp4v2 */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		2AE92C051EA72E38006AD436 /* mp4v2 */ = {
+			isa = PBXGroup;
+			children = (
+				2AE92C061EA72E38006AD436 /* chapter.h */,
+				2AE92C071EA72E38006AD436 /* file.h */,
+				2AE92C081EA72E38006AD436 /* file_prop.h */,
+				2AE92C091EA72E38006AD436 /* general.h */,
+				2AE92C0A1EA72E38006AD436 /* isma.h */,
+				2AE92C0B1EA72E38006AD436 /* itmf_generic.h */,
+				2AE92C0C1EA72E38006AD436 /* itmf_tags.h */,
+				2AE92C0D1EA72E38006AD436 /* mp4v2.h */,
+				2AE92C0E1EA72E38006AD436 /* platform.h */,
+				2AE92C0F1EA72E38006AD436 /* project.h */,
+				2AE92C101EA72E38006AD436 /* sample.h */,
+				2AE92C111EA72E38006AD436 /* streaming.h */,
+				2AE92C121EA72E38006AD436 /* track.h */,
+				2AE92C131EA72E38006AD436 /* track_prop.h */,
+			);
+			path = mp4v2;
+			sourceTree = "<group>";
+		};
+		2AE92C141EA72E38006AD436 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				2AE92C151EA72E38006AD436 /* libmp4v2.a */,
+			);
+			path = lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,11 +610,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A344A171E84F44F0054863F /* DecodeViewController.m in Sources */,
+				2A9D29E11EAD97E600423260 /* MP4Encoder.m in Sources */,
 				2A2286531E83C42900338D54 /* ViewController.m in Sources */,
 				2A2286501E83C42900338D54 /* AppDelegate.m in Sources */,
 				2A344A121E84F43F0054863F /* EncodeViewController.m in Sources */,
+				2AE92C1A1EA73978006AD436 /* SWH264Encoder.m in Sources */,
 				2A22864D1E83C42900338D54 /* main.m in Sources */,
 				2A7BAD901E976FC0005BB454 /* HWH264Encoder.m in Sources */,
+				2A97448F1EA84BAA000D7B46 /* ConvertToMov.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,18 +738,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2D58CNG8UK;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FFMpegTest/FFMpeg-arm64/include";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/FFMpegTest/FFMpeg-arm64/include",
+					"$(PROJECT_DIR)/FFMpegTest/Mp4v2-2.0.0/include",
+				);
 				INFOPLIST_FILE = FFMpegTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FFMpegTest/FFMpeg-arm64/lib",
+					"$(PROJECT_DIR)/FFMpegTest/Mp4v2-2.0.0/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.lj.com.FFMpegTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "ea4ed193-4fd2-4d34-b211-7339e52ce4b8";
-				PROVISIONING_PROFILE_SPECIFIER = wildcard_20161119_1105;
+				PROVISIONING_PROFILE = "2d42c3a8-e1e8-45a1-b210-1b199a992c66";
+				PROVISIONING_PROFILE_SPECIFIER = wildcard_20170421_1308;
 			};
 			name = Debug;
 		};
@@ -670,13 +762,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/FFMpegTest/FFMpeg-arm64/include";
+				HEADER_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/FFMpegTest/FFMpeg-arm64/include",
+					"$(PROJECT_DIR)/FFMpegTest/Mp4v2-2.0.0/include",
+				);
 				INFOPLIST_FILE = FFMpegTest/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FFMpegTest/FFMpeg-arm64/lib",
+					"$(PROJECT_DIR)/FFMpegTest/Mp4v2-2.0.0/lib",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = www.lj.com.FFMpegTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

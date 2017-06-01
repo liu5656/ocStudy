@@ -17,6 +17,8 @@
     NSFileHandle *fileHnadle;
 }
 @property (nonatomic, strong) dispatch_queue_t encodeQueue;
+@property (nonatomic, strong) AVAssetWriterInput *videoInput;
+
 
 
 @end
@@ -101,6 +103,10 @@ void didCompressH264(void * CM_NULLABLE outputCallbackRefCon, void * CM_NULLABLE
         [fileHnadle writeData:sps];
         [fileHnadle writeData:header];
         [fileHnadle writeData:pps];
+//        _h264ConversionComplete(header);
+//        _h264ConversionComplete(sps);
+//        _h264ConversionComplete(header);
+//        _h264ConversionComplete(pps);
     }
 }
 
@@ -111,6 +117,8 @@ void didCompressH264(void * CM_NULLABLE outputCallbackRefCon, void * CM_NULLABLE
         NSData *header = [NSData dataWithBytes:bytes length:(sizeof(bytes) - 1)];
         [fileHnadle writeData:header];
         [fileHnadle writeData:data];
+//        _h264ConversionComplete(header);
+//        _h264ConversionComplete(data);
     }
 }
 
@@ -173,6 +181,35 @@ void didCompressH264(void * CM_NULLABLE outputCallbackRefCon, void * CM_NULLABLE
     return [NSFileHandle fileHandleForWritingAtPath:file];
 }
 
+- (NSString *)getDestnationPathAtStartRecording {
+    NSDateFormatter *formatter1 = [[NSDateFormatter alloc] init];
+    [formatter1 setDateFormat:@"YY_MM_dd_HH_mm_ss"];
+    NSString *fileName = [formatter1 stringFromDate:[NSDate date]];
+    NSString *videoPath = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/vedio/%@.mp4",fileName];
+    return videoPath;
+}
+
+- (AVAssetWriter *)getMp4Writer {
+    NSError *error = nil;
+    AVAssetWriter *writer = [[AVAssetWriter alloc] initWithURL:[NSURL URLWithString:[self getDestnationPathAtStartRecording]] fileType:AVFileTypeQuickTimeMovie error:&error];
+    if (error) {
+        NSLog(@"avasset writer create failed");
+    }
+    return writer;
+}
+
+- (AVAssetWriterInput *)videoInput {
+    if (!_videoInput) {
+        NSDictionary *videoSettings = [NSDictionary dictionaryWithObjectsAndKeys:
+                                       AVVideoCodecH264, AVVideoCodecKey,
+                                       [NSNumber numberWithInt:1280], AVVideoWidthKey,
+                                       [NSNumber numberWithInt:720],AVVideoHeightKey,
+                                       nil];
+        _videoInput = [AVAssetWriterInput assetWriterInputWithMediaType:AVMediaTypeVideo outputSettings:videoSettings];
+        _videoInput.expectsMediaDataInRealTime = YES;
+    }
+    return _videoInput;
+}
 
 
 

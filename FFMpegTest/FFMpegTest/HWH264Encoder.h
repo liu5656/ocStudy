@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-typedef void (^completionBlock)(NSData *h264Data, NSError *error);
-
 @interface HWH264Encoder : NSObject
+
+//@property (nonatomic, copy) void (^h264ConversionComplete)(NSData *data);
 
 + (instancetype)sharedInstance;
 

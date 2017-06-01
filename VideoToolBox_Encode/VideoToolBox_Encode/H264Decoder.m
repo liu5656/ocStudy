@@ -50,7 +50,7 @@ const uint8_t lyStartCode[4] = {0, 0, 0, 1};
     inputStream = [[NSInputStream alloc] initWithFileAtPath:path];
     [inputStream open];
     inputSize = 0;
-    inputMaxSize = 640 * 480 * 3 * 4;
+    inputMaxSize = 1920 * 10800 * 3 * 4;
     inputBuffer = malloc(inputMaxSize);
 }
 

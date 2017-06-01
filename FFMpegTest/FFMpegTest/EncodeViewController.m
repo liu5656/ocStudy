@@ -12,6 +12,8 @@
 
 #import "HWH264Encoder.h"
 
+#import "ConvertToMov.h"
+
 @interface EncodeViewController ()<AVCaptureAudioDataOutputSampleBufferDelegate, AVCaptureVideoDataOutputSampleBufferDelegate>
 
 @property (nonatomic, strong) AVCaptureSession *session;
@@ -21,10 +23,32 @@
 @property (nonatomic, copy) dispatch_queue_t videoQueue;
 @property (nonatomic, copy) dispatch_queue_t audioQueue;
 
+@property (nonatomic, strong) ConvertToMov *Mp4Writer;
+
 @end
 
 @implementation EncodeViewController
 
+- (void)initializeView {
+    UIButton *stop = [UIButton buttonWithType:UIButtonTypeCustom];
+    [stop setFrame:CGRectMake(100, 100, 100, 100)];
+    [stop setBackgroundColor:[UIColor redColor]];
+    [stop setTitle:@"stop" forState:UIControlStateNormal];
+    [stop addTarget:self action:@selector(stopVideoCapture) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:stop];
+    
+//    [self Mp4Writer];
+//    __weak typeof(self) weakself = self;
+//    [HWH264Encoder sharedInstance].h264ConversionComplete = ^(NSData *data) {
+//        [weakself.Mp4Writer procWithData:data];
+//    };
+}
+
+- (void)stopVideoCapture {
+    [self.session stopRunning];
+    [self.Mp4Writer stop];
+    [self.Mp4Writer clean];
+}
 
 #pragma mark set session
 - (void)setSession {
@@ -69,8 +93,9 @@
 #pragma mark AVCaptureVideoDataOutputSampleBufferDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
     if (connection == _videoConnection) {
-        
         [[HWH264Encoder sharedInstance] convertSampleBufferToH264:sampleBuffer];
+        
+//        [self.Mp4Writer procWithData:[self convertVideoSampleBufferToYUVData:sampleBuffer]];
     }else{
         
     }
@@ -129,11 +154,20 @@
     return _session;
 }
 
+- (ConvertToMov *)Mp4Writer {
+    if (!_Mp4Writer) {
+        _Mp4Writer = [[ConvertToMov alloc] init];
+        [_Mp4Writer start];
+    }
+    return _Mp4Writer;
+}
+
 #pragma mark life circle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setSession];
+    [self initializeView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -152,3 +186,5 @@
  */
 
 @end
+
+

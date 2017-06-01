@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import <AudioToolbox/AudioToolbox.h>
 
+#import "DDAudioSession.h"
+#import "DDAudioFileStream.h"
+
 @interface ViewController ()
 
 @end
@@ -17,14 +20,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSString *testString = @"AF1234567890";
-    NSData *testData = [testString dataUsingEncoding: NSUTF8StringEncoding];
-    Byte *testByte = (Byte *)[testData bytes];
-    for(int i=0;i<[testData length];i++)
-        printf("testByte = %d\n",testByte[i]);
-    
+    [self testAVFoundation];
+    [self testAudioFileStream];
 }
+
+- (void)testAVFoundation {
+     [DDAudioSession sharedInstance];
+}
+
+- (void)testAudioFileStream {
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"MP3Sample" ofType:@"mp3"];
+    NSData *data = [[NSData alloc] initWithContentsOfFile:path];
+    [[DDAudioFileStream sharedInstance] parseAudioData:data andFileType:kAudioFileMP3Type andCompletion:nil];
+}
+
 
 
 @end

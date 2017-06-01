@@ -55,7 +55,7 @@
 - (void)initVideoToolBox {
     dispatch_sync(mEncodeQueue, ^{
         frameID = 0;
-        int width = 1280, height = 720;
+        int width = 1920, height = 1080;
         OSStatus status = VTCompressionSessionCreate(NULL,width,height,kCMVideoCodecType_H264,NULL,NULL,NULL,didCompressH264,(__bridge void *)(self),&EncodingSession);
         if (status !=0) {
             NSLog(@"h264: unable to create a h264 session");

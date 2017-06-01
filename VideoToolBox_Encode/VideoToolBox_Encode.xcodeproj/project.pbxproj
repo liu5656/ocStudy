@@ -327,8 +327,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "www.lj.com.VideoToolBox-Encode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "23bd8eb0-a6d1-4fb6-b24c-c1da51d1ca1d";
-				PROVISIONING_PROFILE_SPECIFIER = wildcard_20150426_1049;
+				PROVISIONING_PROFILE = "2d42c3a8-e1e8-45a1-b210-1b199a992c66";
+				PROVISIONING_PROFILE_SPECIFIER = wildcard_20170421_1308;
 			};
 			name = Debug;
 		};
