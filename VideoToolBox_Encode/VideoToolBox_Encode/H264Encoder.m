@@ -210,7 +210,6 @@ void didCompressH264(void * CM_NULLABLE outputCallbackRefCon,void * CM_NULLABLE 
             // move to the next nal unit in the block buffer;
             bufferOffset += AVCCHeaderLength + NALUnitLength;
         }
-        
     }
 }
 

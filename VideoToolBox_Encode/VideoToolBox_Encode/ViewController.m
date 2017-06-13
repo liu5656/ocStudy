@@ -13,6 +13,8 @@
 #import "H264Encoder.h"
 #import "AACEncoder.h"
 
+#import "DDAssetWriter.h"
+
 @interface ViewController ()<AVCaptureVideoDataOutputSampleBufferDelegate, AVCaptureAudioDataOutputSampleBufferDelegate>
 
 @property (nonatomic, strong) UILabel *mLabel;
@@ -140,15 +142,17 @@
 
 #pragma mark AVCaptureVideoDataOutputSampleBufferDelegate
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection {
-    if (self.mCaptureAudioOutput == captureOutput) {
-        dispatch_sync(mAudioEncodeQueue, ^{
-            [self.mAudioEncoder encodeSampleBuffer:sampleBuffer completionBlock:^(NSData *encodedData, NSError *error) {
-                [audioFileHandle writeData:encodedData];
-            }];
-        });
-    }else{
-        [[H264Encoder sharedInstance] encode:sampleBuffer];
-    }
+//    if (self.mCaptureAudioOutput == captureOutput) {
+//        dispatch_sync(mAudioEncodeQueue, ^{
+//            [self.mAudioEncoder encodeSampleBuffer:sampleBuffer completionBlock:^(NSData *encodedData, NSError *error) {
+//                [audioFileHandle writeData:encodedData];
+//            }];
+//        });
+//    }else{
+//        [[H264Encoder sharedInstance] encode:sampleBuffer];
+//    }
+    
+    [[DDAssetWriter sharedInstance] processSampleBuffer:sampleBuffer];
 
 }
 

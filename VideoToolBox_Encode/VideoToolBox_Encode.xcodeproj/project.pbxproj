@@ -14,6 +14,7 @@
 		2A4107601E52ACBA003699AF /* qwe.h264 in Resources */ = {isa = PBXBuildFile; fileRef = 2A41075E1E52ACBA003699AF /* qwe.h264 */; };
 		2A4107611E52ACBA003699AF /* Shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 2A41075F1E52ACBA003699AF /* Shader.fsh */; };
 		2A4107631E52AF4C003699AF /* Shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 2A4107621E52AF4C003699AF /* Shader.vsh */; };
+		2A94C7201EE1542E00F2E99D /* DDAssetWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A94C71F1EE1542E00F2E99D /* DDAssetWriter.m */; };
 		2AD5D6621E54245F00CBFA19 /* AACDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5D6611E54245F00CBFA19 /* AACDecoder.m */; };
 		2AD5D6651E5427A000CBFA19 /* AACEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5D6641E5427A000CBFA19 /* AACEncoder.m */; };
 		2AE42ECF1E2CC2B800923A61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AE42ECE1E2CC2B800923A61 /* main.m */; };
@@ -36,6 +37,8 @@
 		2A41075E1E52ACBA003699AF /* qwe.h264 */ = {isa = PBXFileReference; lastKnownFileType = file; path = qwe.h264; sourceTree = "<group>"; };
 		2A41075F1E52ACBA003699AF /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
 		2A4107621E52AF4C003699AF /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		2A94C71E1EE1542E00F2E99D /* DDAssetWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAssetWriter.h; sourceTree = "<group>"; };
+		2A94C71F1EE1542E00F2E99D /* DDAssetWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAssetWriter.m; sourceTree = "<group>"; };
 		2AD5D6601E54245F00CBFA19 /* AACDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACDecoder.h; sourceTree = "<group>"; };
 		2AD5D6611E54245F00CBFA19 /* AACDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AACDecoder.m; sourceTree = "<group>"; };
 		2AD5D6631E5427A000CBFA19 /* AACEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AACEncoder.h; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 				2AD5D6641E5427A000CBFA19 /* AACEncoder.m */,
 				2AD5D6601E54245F00CBFA19 /* AACDecoder.h */,
 				2AD5D6611E54245F00CBFA19 /* AACDecoder.m */,
+				2A94C71E1EE1542E00F2E99D /* DDAssetWriter.h */,
+				2A94C71F1EE1542E00F2E99D /* DDAssetWriter.m */,
 				2A41075E1E52ACBA003699AF /* qwe.h264 */,
 				2A41075F1E52ACBA003699AF /* Shader.fsh */,
 				2A4107621E52AF4C003699AF /* Shader.vsh */,
@@ -200,6 +205,7 @@
 				2AD5D6651E5427A000CBFA19 /* AACEncoder.m in Sources */,
 				2AD5D6621E54245F00CBFA19 /* AACDecoder.m in Sources */,
 				2AE42ECF1E2CC2B800923A61 /* main.m in Sources */,
+				2A94C7201EE1542E00F2E99D /* DDAssetWriter.m in Sources */,
 				2A41075D1E52A708003699AF /* H264DecodeViewController.m in Sources */,
 				2A4107571E52A3D7003699AF /* H264Decoder.m in Sources */,
 			);
