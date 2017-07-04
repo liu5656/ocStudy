@@ -21,6 +21,8 @@
 		2AC2CA211EFCB9EE0080480D /* CustomViewA.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2CA201EFCB9EE0080480D /* CustomViewA.m */; };
 		2AC2CA241EFCBA020080480D /* CustomViewB.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2CA231EFCBA020080480D /* CustomViewB.m */; };
 		2AC2CA271EFCBA1A0080480D /* CustomViewC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC2CA261EFCBA1A0080480D /* CustomViewC.m */; };
+		2AEF56AB1F05ED2A00C9B14E /* TestScrollViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AEF56A91F05ED2A00C9B14E /* TestScrollViewViewController.m */; };
+		2AEF56AC1F05ED2A00C9B14E /* TestScrollViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AEF56AA1F05ED2A00C9B14E /* TestScrollViewViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,9 @@
 		2AC2CA231EFCBA020080480D /* CustomViewB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewB.m; sourceTree = "<group>"; };
 		2AC2CA251EFCBA1A0080480D /* CustomViewC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomViewC.h; sourceTree = "<group>"; };
 		2AC2CA261EFCBA1A0080480D /* CustomViewC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomViewC.m; sourceTree = "<group>"; };
+		2AEF56A81F05ED2A00C9B14E /* TestScrollViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestScrollViewViewController.h; sourceTree = "<group>"; };
+		2AEF56A91F05ED2A00C9B14E /* TestScrollViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestScrollViewViewController.m; sourceTree = "<group>"; };
+		2AEF56AA1F05ED2A00C9B14E /* TestScrollViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestScrollViewViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +115,9 @@
 				2AC2CA261EFCBA1A0080480D /* CustomViewC.m */,
 				2A3023D81EFCBA6500EA4291 /* CustomViewD.h */,
 				2A3023D91EFCBA6500EA4291 /* CustomViewD.m */,
+				2AEF56A81F05ED2A00C9B14E /* TestScrollViewViewController.h */,
+				2AEF56A91F05ED2A00C9B14E /* TestScrollViewViewController.m */,
+				2AEF56AA1F05ED2A00C9B14E /* TestScrollViewViewController.xib */,
 				2AC2CA111EFCB9C50080480D /* Main.storyboard */,
 				2AC2CA141EFCB9C50080480D /* Assets.xcassets */,
 				2AC2CA161EFCB9C50080480D /* LaunchScreen.storyboard */,
@@ -186,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AEF56AC1F05ED2A00C9B14E /* TestScrollViewViewController.xib in Resources */,
 				2AC2CA181EFCB9C50080480D /* LaunchScreen.storyboard in Resources */,
 				2AC2CA151EFCB9C50080480D /* Assets.xcassets in Resources */,
 				2AC2CA131EFCB9C50080480D /* Main.storyboard in Resources */,
@@ -209,6 +218,7 @@
 				2AC2CA0D1EFCB9C50080480D /* AppDelegate.m in Sources */,
 				2AC2CA0A1EFCB9C50080480D /* main.m in Sources */,
 				2AC2CA211EFCB9EE0080480D /* CustomViewA.m in Sources */,
+				2AEF56AB1F05ED2A00C9B14E /* TestScrollViewViewController.m in Sources */,
 				2AC2CA271EFCBA1A0080480D /* CustomViewC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

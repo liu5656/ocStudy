@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "CustomAlertViewController.h"
+#import "TestScrollViewViewController.h"
 
 @interface ViewController ()<CustomAlertViewControllerDelegate>
 
@@ -18,6 +19,10 @@
 @end
 
 @implementation ViewController
+- (IBAction)pushAction:(UIButton *)sender {
+    TestScrollViewViewController *vc = [[TestScrollViewViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
